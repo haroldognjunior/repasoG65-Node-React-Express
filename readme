@@ -1,0 +1,37 @@
+Primero creamos el proyecto frontend
+
+npm create vite@latest frontend --template react
+cd frontend
+npm install
+npm run dev
+
+Dentro de tu carpeta src, crea las siguientes carpetas y archivos:
+
+components/ProductList/ProductList.jsx
+components/ProductDetail/ProductDetail.jsx
+components/Home/Home.jsx
+App.jsx (actualizar con la lógica de enrutamiento)
+npm install react-router-dom
+
+Crear el backend
+mkdir backend
+cd backend
+npm init -y
+npm install express pg cors
+npm install -D nodemon
+
+Crear un index.js y los scripts de start y dev en el package.json
+
+Acuérdate de crear una base de datos para configurar el pg.
+
+CREATE TABLE products (
+id SERIAL PRIMARY KEY,
+name VARCHAR(100),
+description TEXT,
+price DECIMAL
+);
+
+INSERT INTO products (name, description, price) VALUES
+('Product 1', 'Description for product 1', 10.99),
+('Product 2', 'Description for product 2', 20.99);
+('Product 3', 'Description for product 3', 24.99);
